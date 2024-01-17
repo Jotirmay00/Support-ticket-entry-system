@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 
+// eslint-disable-next-line react/prop-types
 const FormInput = ({value,place,onChange}) => {
   return (
     <div>
@@ -10,7 +12,8 @@ const FormInput = ({value,place,onChange}) => {
       id={place}
       value={value} 
       onChange={(e) => onChange(e.target.value)}
-      placeholder={place} />
+      placeholder={place}
+      autoFocus />
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ const app = express()
 const port = process.env.PORT || 8000
 require('dotenv').config()
 const connectDB = require('./db/connect')
+const cors =require('cors')
 
 const agentRoute = require('./routes/agent')
 const ticketRoute = require('./routes/ticket')
