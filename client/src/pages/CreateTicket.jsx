@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Spinner from "../components/Spinner";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import FormInput from "../components/FormInput";
 
 const CreateTicket = () => {
@@ -11,7 +11,6 @@ const CreateTicket = () => {
   const [severity, setSeverity] = useState("low");
   const [status, setStatus] = useState("new");
   const [description, setDescription] = useState("");
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
@@ -34,7 +33,7 @@ const CreateTicket = () => {
         setType("");
         setSeverity("");
         setStatus("");
-        navigate("/");
+       
       })
       .catch((error) => {
         setLoading(false);

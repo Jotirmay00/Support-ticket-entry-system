@@ -12,9 +12,46 @@ const CreateAgent = () => {
   const [description, setDescription] = useState("");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [errorData,setErrorData] = useState({})
+
+
+  const validation = () =>{
+    let err ={}
+    let param = true
+
+    if (name == "")
+    {
+      err.name = "Please Enter your name"
+      param = false
+    }
+
+    if (email == "")
+    {
+      err.email = "Please Enter the mail"
+      param = false
+    }
+
+    if (phone == "")
+    {
+      err.phone ="Please Enter the number"
+      param = false
+    }
+    if (description == "")
+    {
+      err.description ="Please Enter description"
+      param = false
+    }
+    setErrorData({...err})
+    return param
+
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let isValidate = validation()
+
     const data = {
       name,
       email,
@@ -47,13 +84,21 @@ const CreateAgent = () => {
           Create Agent
         </h1>
         <FormInput place="Name" value={name} onChange={setName} />
+        <span className="text-red-500 text-center">{errorData.name}</span>
+
         <FormInput place="Email" value={email} onChange={setEmail} />
+        <span className="text-red-500 text-center">{errorData.email}</span>
+
         <FormInput place="Phone-no." value={phone} onChange={setPhone} />
+        <span className="text-red-500 text-center">{errorData.phone}</span>
+
         <FormInput
           place="Description"
           value={description}
           onChange={setDescription}
         />
+         <span className="text-red-500 text-center">{errorData.description}</span>
+
         <div className="flex flex-col rounded-xl w-[600px] p-4 mx-auto items-center">
           <button
             type="submit"
