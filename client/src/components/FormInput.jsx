@@ -7,7 +7,7 @@ const FormInput = ({value,place,onChange}) => {
     <div>
         <div className='my-4'>
         <input
-      className='px-4 py-2 w-full rounded-full border-slate-600 border-2' 
+      className='w-full p-2 border border-gray-400 placeholder-blue-500 placeholder-opacity-75 rounded-full focus:outline-none focus:border-blue-500' 
       type="text"
       id={place}
       value={value} 
