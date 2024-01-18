@@ -31,7 +31,7 @@ const CreateTicket = () => {
     
     setLoading(true);
     axios
-      .post("http://localhost:8000/api/support-tickets", formData)
+      .post("http://support-ticket-entry-system-jade.vercel.app/api/support-tickets", formData)
       .then((response) => {
         console.log("Form submitted successfully:", response.data);
         Swal.fire({
