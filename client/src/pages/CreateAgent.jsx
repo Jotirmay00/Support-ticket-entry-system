@@ -66,7 +66,7 @@ const CreateAgent = () => {
     let isValidate = validation();
     setLoading(true);
     axios
-      .post("http://support-ticket-entry-system-jade.vercel.app/api/support-agents", formData)
+      .post("https://support-ticket-entry-system-jade.vercel.app/api/support-agents", formData)
       .then((response) => {
         console.log("Form submitted successfully:", response.data);
         setLoading(false);
