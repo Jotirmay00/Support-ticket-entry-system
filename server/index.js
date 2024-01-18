@@ -10,7 +10,7 @@ const ticketRoute = require('./routes/ticket')
 
 
 app.use(cors( {
-    origin :["https://support-ticket-entry-system-front.vercel.app"],
+    origin :["https://support-ticket-entry-system-front.vercel.app/"],
     methods:["POST","GET"],
     credentials:true
 }))
