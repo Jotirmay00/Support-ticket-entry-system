@@ -9,7 +9,11 @@ const agentRoute = require('./routes/agent')
 const ticketRoute = require('./routes/ticket')
 
 
-app.use(cors())
+app.use(cors( {
+    origin :["https://support-ticket-entry-system-front.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+}))
 
 
 app.use(express.json())
