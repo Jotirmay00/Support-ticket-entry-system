@@ -7,14 +7,14 @@ const FormInput = ({value,place,onChange,name}) => {
     <div>
         <div className='my-4'>
         <input
-      className='w-full p-2 border border-black placeholder-opacity-75 rounded-lg focus:outline-none focus:border-blue-500' 
+      className='w-full p-2 border border-black placeholder-opacity-75 rounded-lg focus:outline-none focus:border-orange-400' 
       type="text"
       id={place}
       name={name}
       value={value} 
       onChange={(e) => onChange(e)}
       placeholder={place}
-      autoFocus />
+       />
       </div>
     </div>
   )
