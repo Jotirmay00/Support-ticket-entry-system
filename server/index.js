@@ -9,9 +9,7 @@ const agentRoute = require('./routes/agent')
 const ticketRoute = require('./routes/ticket')
 
 
-app.use(cors(
-    
-))
+app.use(cors())
 
 
 app.use(express.json())
